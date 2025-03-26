@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonita's Webpage</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Variable */
+    :root {
+      --color-primary: #f5ccf5;
+      --color-link: #BC015C;
+      --color-background: #f4f4f4;
+      --color-border: #ccc;
+    }
+
+    /* Global Styles */
+    a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      background-color: var(--color-link);
+      border: none;
+      /* Button have default border */
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      /* Button has smaller default font. */
+    }
+
+    .button:hover {
+      text-decoration: none;
+      /* Links have default text-decoration */
+    }
+
+    .center-content {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color-primary);
+      color: black;
+      padding: 1rem;
+    }
+
+    header a {
+      margin-left: 1rem;
+    }
+
+    /* General Section */
+    .section {
+      padding: 2rem;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .about-section img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+    }
+
+    .about-section div {
+      flex: 1 1 45%;
+    }
+
+    /* Media Query for screens small than 768px wide. */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+      }
+
+      .about-section img {
+        margin: auto;
+      }
+
+      .section {
+        text-align: center;
+      }
+    }
+
+    /* Skills Section */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2rem;
+      gap: 1rem;
+    }
+
+    .skills-grid div {
+      padding: 1rem;
+      background-color: var(--color-background);
+      border: 1px solid var(--color-border);
+    }
+
+    .skills-grid div:nth-child(3n) {
+      text-align: right;
+    }
+
+    /* Footer Section */
+    footer {
+      display: flex;
+      justify-content: center;
+      background-color: var(--color-primary);
+      color: white;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      padding: 2rem;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .projects-grid div {
+      background-color: var(--color-background);
+      padding: 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .projects-grid div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px var(--color-primary);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>Sonita's Webpage</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section about-section">
+      <div>
+        <h2>About Me</h2>
+        <p>Hello! My name is Sonita. I'm a web developer with a passion for creating beautiful, responsive websites.</p>
+      </div>
+      <img src="images/unicorn2.jpg" alt="Sonita">
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <div><strong>HTML</strong></div>
+        <div>1 Year</div>
+        <div>Semantic HTML, Forms</div>
+
+        <div><strong>CSS</strong></div>
+        <div>1 Year</div>
+        <div>Flexbox, CSS Grid, Media Queries</div>
+
+        <div><strong>Python</strong></div>
+        <div>1 Year</div>
+        <div>Flask, Django, Data Analysis</div>
+      </div>
+    </section>
+
+    <div class="center-content">
+      <button class="button">Email Me</button>
+      &nbsp;
+      <a href="" class="button">Call Me</a>
+    </div>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div>
+          <h3>Project 1</h3>
+          <p>A simple HTML & CSS project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div>
+          <h3>Project 2</h3>
+          <p>A dynamic web app using JavaScript.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="">Facebook</a>
+    <a href="">GitHub</a>
+    <a href="">LinkedIn</a>
+  </footer>
+
+</body>
+
+</html>
+
+
