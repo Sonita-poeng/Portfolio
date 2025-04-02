@@ -1,0 +1,159 @@
+/* Buttons */
+.button {
+    background-color: var(--color-link);
+    /* Button have default border */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    padding: 1rem 2rem;
+    /* Button has smaller default font. */
+    font-size: 1rem;
+  }
+  
+  .button:hover {
+    /* Links have default text-decoration */
+    text-decoration: none;
+  }
+  
+  /* Containers */
+  .section {
+    padding: 2rem;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: black;
+    padding: 1rem;
+  }
+  
+  header a {
+    margin-left: 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .about-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .about-section div {
+    flex: 1 1 45%;
+  }
+  
+  /* Media Query for screens small than 768px wide. */
+  @media (max-width: 768px) {
+    .section {
+      text-align: center;
+    }
+  
+    .about-section {
+      flex-direction: column;
+    }
+  
+    .about-section img {
+      margin: auto;
+    }
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .skills-grid div {
+    padding: 1rem;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+  }
+  
+  .skills-grid div:nth-child(3n) {
+    text-align: right;
+  }
+  
+  /* Footer Section */
+  footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  
+  /* Projects Section */
+  .projects-grid {
+    display: grid;
+    padding: 2rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .projects-grid div {
+    background-color: var(--color-background);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .projects-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px var(--color-primary);
+  }
+  
+  /* Animations */
+  .scale-and-rotate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .scale-and-rotate:hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Form Style */
+  .form {
+    margin: 2rem auto;
+    width: fit-content;
+    background-color: var(--color-background);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form input,
+  .form textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .form textarea {
+    resize: vertical;
+  }
